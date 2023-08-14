@@ -1,14 +1,8 @@
 package com.demoqa.tests;
 
-import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeForm extends TestBase {
 
@@ -18,6 +12,7 @@ public class PracticeForm extends TestBase {
     void formTest() {
 
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName("Yuriy")
                 .setLastName("Lvatov")
                 .setUserEmail("yuriy.lvatov@yandex.ru")

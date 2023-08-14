@@ -1,10 +1,8 @@
 package com.demoqa.tests;
 
-import com.codeborne.selenide.Condition;
 import com.demoqa.pages.TextBoxPage;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
 
 public class TextBox extends TestBase {
 
@@ -15,6 +13,7 @@ public class TextBox extends TestBase {
 
         practiceTextBoxPage
                 .textBoxPageOpen()
+                .removeBanner()
                 .setFullName("Yuriy Lvatov")
                 .setUserEmail("yuriy.lvatov@yandex.ru")
                 .setCurrentAddress("Penza, Chebysheva, 16")
