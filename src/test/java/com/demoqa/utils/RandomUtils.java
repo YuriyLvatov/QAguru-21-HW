@@ -1,9 +1,14 @@
 package com.demoqa.utils;
 
+import com.github.javafaker.Faker;
+
 import java.security.SecureRandom;
+import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
+
+    Faker faker = new Faker(new Locale("ru"));
 
     public static void main(String[] args) {
         System.out.println(getRandomString(10));
@@ -55,4 +60,9 @@ public class RandomUtils {
 
         return array[index];
     }
+
+
+
+
+
 }

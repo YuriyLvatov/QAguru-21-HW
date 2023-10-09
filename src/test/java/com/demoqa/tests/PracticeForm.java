@@ -2,8 +2,10 @@ package com.demoqa.tests;
 
 
 import com.demoqa.pages.RegistrationPage;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 
+import java.util.Locale;
 
 
 public class PracticeForm extends TestBase {
@@ -12,18 +14,27 @@ public class PracticeForm extends TestBase {
     @Test
     void formTest() {
 
+        Faker faker = new Faker(new Locale("en"));
+
+        String firstName = faker.name().firstName(),
+                lastName = faker.name().lastName(),
+                userEmail = faker.internet().emailAddress(),
+                streetAddress = faker.address().streetAddress(),
+                userNumberPhone = faker.phoneNumber().subscriberNumber(10);
+
+
         registrationPage.openPage()
                 .removeBanner()
-                .setFirstName("Yuriy")
-                .setLastName("Lvatov")
-                .setUserEmail("yuriy.lvatov@yandex.ru")
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setUserEmail(userEmail)
                 .setGender("Male")
-                .setUserNumber("9042693079")
+                .setUserNumber(userNumberPhone)
                 .setBirthDate("18","May", "1991")
                 .setSubject("Maths")
                 .setHobbie("Music")
                 .selectPicture("ava.PNG")
-                .setCurrentAddress("Bad and long history...")
+                .setCurrentAddress(streetAddress)
                 .selectStateAndCity("Haryana", "Karnal")
 
                 .submitPress();
