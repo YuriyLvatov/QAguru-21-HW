@@ -1,11 +1,12 @@
 package com.demoqa.tests;
 
+
 import com.demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
 
-public class PracticeForm extends TestBase {
 
+public class PracticeForm extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
@@ -25,7 +26,7 @@ public class PracticeForm extends TestBase {
                 .setCurrentAddress("Bad and long history...")
                 .selectStateAndCity("Haryana", "Karnal")
 
-                        .submitPress();
+                .submitPress();
 
         registrationPage.verifyRegistrationResultModalAppears()
                 .verifyResult("Student Name","Yuriy Lvatov")
@@ -39,7 +40,7 @@ public class PracticeForm extends TestBase {
                 .verifyResult("Address","Bad and long history...")
                 .verifyResult("State and City","Haryana Karnal")
 
-                        .closeModalVerify();
+                .closeModalVerify();
 
     }
 }
