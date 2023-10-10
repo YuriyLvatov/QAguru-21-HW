@@ -50,43 +50,4 @@ public class PracticeForm extends TestBase {
 
     }
 
-    @Test
-    void formTest1() {
-
-        System.out.println(randomVariables.firstNameValue);
-        System.out.println(randomVariables.lastNameValue);
-        System.out.println(randomVariables.emailValue);
-        System.out.println(randomVariables.genderValue);
-        System.out.println(randomVariables.phoneNumber);
-        System.out.println(randomVariables.monthValue);
-        System.out.println(randomVariables.yearValue);
-        System.out.println(randomVariables.dayValue);
-        System.out.println(randomVariables.subjectValue);
-        System.out.println(randomVariables.hobbyValue);
-        System.out.println(randomVariables.pictureNameValue);
-        System.out.println(randomVariables.addressValue);
-        System.out.println(randomVariables.stateValue);
-        System.out.println(randomVariables.cityValue);
-
-    }
-
-    @Test
-    void formTest2() {
-
-        System.out.println(randomVariables.firstNameValue);
-        System.out.println(randomVariables.lastNameValue);
-        System.out.println(randomVariables.emailValue);
-        System.out.println(randomVariables.genderValue);
-        System.out.println(randomVariables.phoneNumber);
-        System.out.println(randomVariables.monthValue);
-        System.out.println(randomVariables.yearValue);
-        System.out.println(randomVariables.dayValue);
-        System.out.println(randomVariables.subjectValue);
-        System.out.println(randomVariables.hobbyValue);
-        System.out.println(randomVariables.pictureNameValue);
-        System.out.println(randomVariables.addressValue);
-        System.out.println(randomVariables.stateValue);
-        System.out.println(randomVariables.cityValue);
-
-    }
 }

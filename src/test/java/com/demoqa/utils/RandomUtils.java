@@ -12,6 +12,12 @@ public class RandomUtils {
 
     static Faker fakerEn = new Faker(new Locale("en"));
 
+    public static String getRandomText() {
+        return fakerEn.harryPotter().;
+    }
+
+
+
     public static String getRandomString(int len) {
         String AB = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         SecureRandom rnd = new SecureRandom();
@@ -22,16 +28,17 @@ public class RandomUtils {
         return sb.toString();
     }
 
-    public static int getRandomInt(int min, int max) {
-
-        return ThreadLocalRandom.current().nextInt(min, max + 1);
-    }
-
     public static String getRandomItemFromArray(String[] array) {
         int index = getRandomInt(0, array.length - 1);
 
         return array[index];
     }
+
+    public static int getRandomInt(int min, int max) {
+
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
+    }
+
 
     public static String getRandomFirstName() {
         return fakerEn.name().firstName();
@@ -43,11 +50,7 @@ public class RandomUtils {
     }
 
     public static String getRandomEmail() {
-         // return getRandomString(10) + "@qa.guru";
-       // return String.format("%s@%s.%s",
-        //        getRandomString(10),
-         //       getRandomString(4),
-          //      getRandomString(5));
+
         return fakerEn.internet().emailAddress();
     }
 
@@ -59,10 +62,6 @@ public class RandomUtils {
 
     public static String getRandomMobileNumber() {
 
-        //return String.format("+%s (%s) %s - %s - %s",
-         //       getRandomInt(1, 9), getRandomInt(111, 999),
-          //      getRandomInt(111, 999), getRandomInt(11, 99),
-          //      getRandomInt(11, 99));
         return fakerEn.numerify("##########");
     }
 
