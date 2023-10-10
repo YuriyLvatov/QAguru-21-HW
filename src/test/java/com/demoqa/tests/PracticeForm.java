@@ -5,9 +5,6 @@ import com.demoqa.pages.RegistrationPage;
 import com.demoqa.utils.RandomVariables;
 import org.junit.jupiter.api.Test;
 
-import static com.demoqa.utils.RandomVariables.*;
-
-
 public class PracticeForm extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     RandomVariables randomVariables = new RandomVariables();

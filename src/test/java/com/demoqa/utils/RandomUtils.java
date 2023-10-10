@@ -13,7 +13,7 @@ public class RandomUtils {
     static Faker fakerEn = new Faker(new Locale("en"));
 
     public static String getRandomText() {
-        return fakerEn.harryPotter().;
+        return fakerEn.harryPotter().character();
     }
 
 
