@@ -6,17 +6,12 @@ import java.security.SecureRandom;
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
+import static Data.StateAndCityPracticeForm.statesAndCities;
+
 public class RandomUtils {
 
     static Faker fakerEn = new Faker(new Locale("en"));
 
-    public static void main(String[] args) {
-        System.out.println(getRandomString(10));
-        System.out.println(getRandomString(15));
-        System.out.println(getRandomEmail());
-        System.out.println(getRandomPhone());
-        System.out.println(getRandomGender());
-    }
     public static String getRandomString(int len) {
         String AB = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         SecureRandom rnd = new SecureRandom();
@@ -112,31 +107,15 @@ public class RandomUtils {
         return fakerEn.address().fullAddress();
     }
 
+
     public static String getRandomState() {
-        String[] states = {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
-        return new Faker().options().option(states);
+
+        return fakerEn.options().option(statesAndCities.keySet().toArray()).toString();
     }
 
-    public static String getRandomCity(String stateValue) {
-        switch (stateValue) {
-            case "NCR" ->  {
-                String[] city = {"Delhi", "Gurgaon", "Noida"};
-                return new Faker().options().option(city);
-            }
-            case "Uttar Pradesh" -> {
-                String[] city = {"Agra", "Lucknow", "Merrut"};
-                return new Faker().options().option(city);
-            }
-            case "Haryana" -> {
-                String[] city = {"Karnal", "Panipat"};
-                return new Faker().options().option(city);
-            }
-            case "Rajasthan" -> {
-                String[] city = {"Jaipur", "Jaiselmer"};
-                return new Faker().options().option(city);
-            }
+    public static String getRandomCity(String state) {
 
-        }
-        return null;
+        return fakerEn.options().option(statesAndCities.get(state));
     }
+
 }

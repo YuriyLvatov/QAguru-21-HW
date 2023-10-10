@@ -4,7 +4,8 @@ import static com.demoqa.utils.RandomUtils.*;
 
 public class RandomVariables {
 
-    public static String firstNameValue = getRandomFirstName(),
+
+    public String firstNameValue = getRandomFirstName(),
             lastNameValue = getRandomLastName(),
             emailValue = getRandomEmail(),
             genderValue = getRandomGender(),
